@@ -3,10 +3,12 @@ import { motion } from "framer-motion"
 
 export const NavModuleStyles = styled.nav`
   .nav {
-    position: fixed;
+    position: relative;
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
+    height: 80%;
     z-index: 100;
     padding: 20px var(--borderSpacing) 0 var(--borderSpacing);
 
@@ -15,7 +17,7 @@ export const NavModuleStyles = styled.nav`
     }
 
     @media (min-width: 1440px) {
-      padding-top: 70px;
+      padding-top: 50px;
     }
   }
 
@@ -23,7 +25,7 @@ export const NavModuleStyles = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    height: 80%;
   }
 
   .menu {

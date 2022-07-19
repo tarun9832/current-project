@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
-import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import { StaticImage } from "gatsby-plugin-image"
+
 import useFeaturedProduct from "../../hooks/use-featured-product"
 import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
@@ -35,7 +36,7 @@ const NavModule = () => {
     setSubNav((subNavIsOpen) => !subNavIsOpen)
   }
 
-  const { title } = UseSiteMetadata()
+
 
   return (
     <NavModuleStyles>
@@ -62,15 +63,16 @@ const NavModule = () => {
               variants={barThreeVariants}
             ></motion.span>
           </HamburgerStyles>
+           <StaticImage
+            
+            src="../../../static/logos/logo_black.png"
+            alt="Kiran Foundation logo"
+            placeholder= "blurred"
+            layout="constrained"
+            width="5%"
 
-          {title && (
-            <LogoStyles>
-              <Link to="/">
-                {title}
-                <span>.</span>
-              </Link>
-            </LogoStyles>
-          )}
+            />
+
         </div>
       </div>
       <motion.div
